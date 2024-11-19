@@ -14,7 +14,7 @@
     },
     "autoload-dev": {
       "psr-4": {
-        "Supabase\\Functions\\Test": "tests/"
+        "Supabase\\Functions\\Test\\": "tests/"
       }
     },
     "authors": [
@@ -25,12 +25,12 @@
     ],
     "require": {
       "php": "^8.1",
-      "vlucas/phpdotenv": "*",
-      "guzzlehttp/guzzle": "*"
+      "vlucas/phpdotenv": "^5.6",
+      "guzzlehttp/guzzle": "^7.9"
     },
     "require-dev": {
-      "pestphp/pest": "3.5",
-      "phpstan/phpstan": "*"
+      "pestphp/pest": "^3.5",
+      "phpstan/phpstan": "^2.0"
     },
     "scripts": {
       "post-root-package-install": [
