@@ -37,7 +37,7 @@
         "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
       ],
       "test": [
-        "@php vendor/bin/phpstan analyse src tests --ansi"
+        "@php vendor/bin/pest"
       ]
     },
     "config": {
