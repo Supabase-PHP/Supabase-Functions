@@ -1,15 +1,21 @@
 {
     "name": "supabase-php/supabase-functions",
-    "description": "Supabase Funtions",
+    "description": "Supabase Edge Functions for PHP",
+    "version": "0.0.1",
     "type": "library",
-    "require-dev": {
-        "pestphp/pest": "^3.5"
-    },
+    "keywords": ["Supabase","Functions","supabase-php","supabase-functions"],
+    "homepage": "https://github.com/supabase-php/supabase-functions",
     "license": "MIT",
     "autoload": {
-        "psr-4": {
-            "SupabasePhp\\SupabaseFunctions\\": "src/"
-        }
+      "psr-0": { "": "src/" },
+      "psr-4": {
+        "Supabase\\Functions\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Supabase\\Functions\\Test": "tests/"
+      }
     },
     "authors": [
         {
@@ -17,11 +23,30 @@
             "email": "sushilkumbhar77@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {},
+    "require": {
+      "php": "^8.1",
+      "vlucas/phpdotenv": "*",
+      "guzzlehttp/guzzle": "*"
+    },
+    "require-dev": {
+      "pestphp/pest": "3.5",
+      "phpstan/phpstan": "*"
+    },
+    "scripts": {
+      "post-root-package-install": [
+        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+      ],
+      "test": [
+        "@php vendor/bin/phpstan analyse src tests --ansi"
+      ]
+    },
     "config": {
+      "optimize-autoloader": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true
+            "pestphp/pest-plugin": true,
+            "php-http/discovery": true
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
