@@ -1,26 +1,16 @@
 {
     "name": "supabase-php/supabase-functions",
     "description": "Supabase Edge Functions for PHP",
-    "version": "0.0.1-alpha",
     "type": "library",
-    "keywords": ["Supabase", "Functions", "supabase-php", "supabase-functions"],
-    "homepage": "https://github.com/supabase-php/supabase-functions",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Sushil Kumar",
-            "email": "sushilkumbhar77@gmail.com"
-        }
-    ],
     "require": {
-        "php": "^8.1",
-        "vlucas/phpdotenv": "^5.6",
-        "guzzlehttp/guzzle": "^7.9"
+        "vlucas/phpdotenv": "5.6",
+        "guzzlehttp/guzzle": "7.9"
     },
     "require-dev": {
-        "pestphp/pest": "^3.5",
-        "phpstan/phpstan": "^2.0"
+        "pestphp/pest": "3.5",
+        "phpstan/phpstan": "2.0"
     },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Supabase\\Functions\\": "src/"
@@ -31,11 +21,17 @@
             "Supabase\\Functions\\Tests\\": "tests/"
         }
     },
+    "authors": [
+        {
+            "name": "Sushil Kumar",
+            "email": "sushilkumbhar77@gmail.com"
+        }
+    ],
     "scripts": {
-      "post-root-package-install": [
-        "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-      ],
-      "test": ["@php vendor/bin/pest"]
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "test": ["@php vendor/bin/pest"]
     },
     "config": {
         "optimize-autoloader": true,
