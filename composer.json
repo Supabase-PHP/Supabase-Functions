@@ -1,13 +1,12 @@
 {
     "name": "supabase-php/supabase-functions",
     "description": "Supabase Edge Functions for PHP",
-    "version": "0.0.1",
+    "version": "0.0.1-alpha",
     "type": "library",
     "keywords": ["Supabase","Functions","supabase-php","supabase-functions"],
     "homepage": "https://github.com/supabase-php/supabase-functions",
     "license": "MIT",
     "autoload": {
-      "psr-0": { "": "src/" },
       "psr-4": {
         "Supabase\\Functions\\": "src/"
       }
