@@ -8,4 +8,9 @@ class Functions
   {
     // Supabase Edge Functions
   }
+
+  public function connect(): void
+  {
+    // connect
+  }
 }
