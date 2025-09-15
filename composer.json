@@ -11,7 +11,7 @@
     },
     "require-dev": {
         "pestphp/pest": "4.0.4",
-        "phpstan/phpstan": "2.1.22"
+        "phpstan/phpstan": "2.1.25"
     },
     "license": "MIT",
     "autoload": {
