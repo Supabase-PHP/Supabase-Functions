@@ -10,7 +10,7 @@
         "guzzlehttp/guzzle": "^7.9"
     },
     "require-dev": {
-        "pestphp/pest": "4.4.3",
+        "pestphp/pest": "4.4.5",
         "phpstan/phpstan": "2.1.45"
     },
     "license": "MIT",
