@@ -1,16 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Supabase\Functions;
 
 class Functions
 {
-  public function __construct()
-  {
-    // Supabase Edge Functions
-  }
-
-  public function connect(): void
-  {
-    // connect
-  }
+    public function __construct(
+        private string $url,
+        private string $token
+    ) {}
 }
