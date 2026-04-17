@@ -9,13 +9,13 @@ use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 use Supabase\Functions\Functions;
 
-#[CoversClass(Database::class)]
+#[CoversClass(Functions::class)] // Changed from Database::class
 class SupabaseTest extends TestCase
 {
     #[Test]
     public function test_create_connection()
     {
-        $function = new Functions('https://exame.com', 'tyt');
+        $function = new Functions('https://example.com', 'tyt');
 
         $this->assertInstanceOf(Functions::class, $function);
     }
