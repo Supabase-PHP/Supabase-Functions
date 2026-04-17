@@ -44,7 +44,7 @@
         "test": [
             "@test:lint",
             "@test:type",
-            "test:unit"
+            "@test:unit"
         ]
     },
     "config": {
