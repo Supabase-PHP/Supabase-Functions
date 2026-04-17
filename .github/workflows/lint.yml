@@ -40,7 +40,7 @@ jobs:
       run: composer run-script test:lint
 
     - name: Commit changes
-      uses: stefanzweifel/git-auto-commit-action@v5
+      uses: stefanzweifel/git-auto-commit-action@v7
       with:
         commit_message: "chore: fix code style (laravel pint)"
         status_options: '--untracked-files=no'
