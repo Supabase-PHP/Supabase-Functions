@@ -10,7 +10,10 @@
     "homepage": "https://github.com/supabase-php/supabase-functions",
     "type": "library",
     "require": {
-        "php": "^8.4"
+        "php": "^8.4",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*"
     },
     "license": "MIT",
     "autoload": {
@@ -43,8 +46,18 @@
     "config": {
         "preferred-install": "dist",
         "optimize-autoloader": true,
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "require-dev": {
+        "laravel/pint": "^1.29",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^13.1",
+        "tomasvotruba/type-coverage": "^2.1"
+    }
 }
